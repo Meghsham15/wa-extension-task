@@ -22,24 +22,46 @@ app.post("/addUserNotes", async function (req, res) {
         note: data.note
     });
     try {
-        const result = await user.save();
-        // Handle the success case
-        res.status(200).send({
-            message: 'User added successfully!',
-            user: result,
-            status:true
-        });
+        const userExists = await User.findOne({ phoneNumber: data.phoneNumber });
+        if (userExists) {
+            const result = await User.updateOne(
+                { phoneNumber: data.phoneNumber },
+                {
+                    $set: {
+                        contactName: data.contactName,
+                        note: data.note
+                    }
+                }
+            );
+
+            // Handle the success case for update
+            res.status(200).send({
+                message: 'User updated successfully!',
+                user: result,
+                status: true
+            });
+
+        } else {
+            const result = await user.save();
+            // Handle the success case
+            res.status(200).send({
+                message: 'User added successfully!',
+                user: result,
+                status: true
+            });
+        }
+
     } catch (err) {
         // Handle the error case
         res.status(500).send({
             message: 'Failed to add user',
             error: err,
-            status:false
+            status: false
         });
     }
 });
 
-app.post("/getUserNotes",async function (req, res) {
+app.post("/getUserNotes", async function (req, res) {
     let phoneNumber = req.body.phoneNumber;
     try {
         const user = await User.findOne({ phoneNumber: phoneNumber });
