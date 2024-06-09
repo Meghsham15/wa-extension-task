@@ -169,6 +169,7 @@ function createPopup() {
   nameInput.type = 'text';
   nameInput.id = 'name';
   nameInput.name = 'name';
+  nameInput.required = true;
   crmPopup.appendChild(nameInput);
 
   // Create and append number label and input
@@ -181,6 +182,7 @@ function createPopup() {
   numberInput.type = 'text';
   numberInput.id = 'number';
   numberInput.name = 'number';
+  numberInput.required = true;
   crmPopup.appendChild(numberInput);
 
   // Create and append notes label and textarea
@@ -192,6 +194,7 @@ function createPopup() {
   const notesTextarea = document.createElement('textarea');
   notesTextarea.id = 'notes';
   notesTextarea.name = 'notes';
+  notesTextarea.required = true;
   crmPopup.appendChild(notesTextarea);
 
   // Create and append save button
