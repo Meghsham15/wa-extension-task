@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "WhatsApp Enhancer",
+    "version": "1.0",
+    "description": "Enhance WhatsApp Web functionality",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://web.whatsapp.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": ["popup.css"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "mjlogo.png",
+            "48": "mjlogo.png",
+            "128": "mjlogo.png"
+        }
+    },
+    "icons": {
+        "16": "mjlogo.png",
+        "48": "mjlogo.png",
+        "128": "mjlogo.png"
+    }
+}

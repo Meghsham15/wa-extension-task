@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+#filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filters button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#filters button:hover {
+    background-color: #45a049;
+}
+
+#customFilters {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#customFilters h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.customFilter {
+    margin-bottom: 10px;
+}
+
+.customFilter label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.customFilter input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.customFilter textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.saveButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+    background-color: #0056b3;
+}
+
+.navbar {
+    background-color: #075e54;
+    /* WhatsApp green */
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-item {
+    margin-right: 20px;
+    /* Adjust spacing between navbar items */
+}
+
+.navbar-link {
+    color: #fff;
+    /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    /* Uppercase text */
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+#crmPopup {
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+    padding: 15px;
+    background-color: #25D366;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+#closePopupButton {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#crmPopup h2 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#crmPopup label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+#crmPopup input,
+#crmPopup textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+#crmPopup input {
+    height: 25px;
+}
+
+#crmPopup textarea {
+    height: 60px;
+    resize: none;
+}
+
+#saveButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #128C7E;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#saveButton:hover {
+    background-color: #075E54;
+}
+
+.hidden {
+    display: none;
+}
